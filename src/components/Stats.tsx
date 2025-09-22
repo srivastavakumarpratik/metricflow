@@ -9,7 +9,7 @@ const Stats = () => {
     { value: 2.3, suffix: 'M+', label: 'Additional revenue generated', prefix: '$' },
     { value: 47, suffix: '%', label: 'Average revenue increase', prefix: '' },
     { value: 6, suffix: ' weeks', label: 'Average time to see results', prefix: '' },
-    { value: 200, suffix: '+', label: 'Stores analyzed', prefix: '' }
+    { value: 200, suffix: '+', label: 'E-commerce stores analyzed', prefix: '' }
   ];
 
   useEffect(() => {
@@ -54,7 +54,7 @@ const Stats = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-16 bg-slate-800 border-y border-slate-700">
+    <section ref={sectionRef} className="py-16 bg-blue-50 border-y border-blue-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
@@ -64,12 +64,12 @@ const Stats = () => {
                 isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
               }`}
             >
-              <div className="text-3xl lg:text-4xl font-bold text-emerald-400 mb-2">
+              <div className="text-3xl lg:text-4xl font-bold text-blue-600 mb-2">
                 {stat.prefix}
                 {index === 0 ? counters[index].toFixed(1) : Math.floor(counters[index])}
                 {stat.suffix}
               </div>
-              <p className="text-slate-300 text-sm lg:text-base">
+              <p className="text-gray-600 text-sm lg:text-base">
                 {stat.label}
               </p>
             </div>
